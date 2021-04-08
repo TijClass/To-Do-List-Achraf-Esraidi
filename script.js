@@ -21,9 +21,21 @@ function inputLength(e){
   return  e.length;
 }
 
+function createListElement(){
+  let div = document.createElement('div')
+  let elmnt = document.createElement('li')
+  let input = document.getElementById('userinput').value
+  elmnt.innerHTML = input;
+  div.classList.add("li-wrapper")
+  div.appendChild(elmnt)
+  return div ;
+}
 
 /*        Fin           */
-
+button.addEventListener("click", e => {
+  e.preventDefault();
+  ul.appendChild(createListElement());
+});
 clearButton.addEventListener("click", clearList);
 ul.addEventListener("click", strikeThrough);
 button.addEventListener("click", addListAfterClick);
