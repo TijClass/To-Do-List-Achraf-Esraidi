@@ -20,17 +20,26 @@ console.log(inputLength(li))
 function inputLength(e){
   return  e.length;
 }
-
 function createListElement(){
-  let div = document.createElement('div')
-  let elmnt = document.createElement('li')
-  let input = document.getElementById('userinput').value
+  let div = document.createElement('div');
+  let elmnt = document.createElement('li');
+  let input = document.getElementById('userinput').value;
   elmnt.innerHTML = input;
-  div.classList.add("li-wrapper")
-  div.appendChild(elmnt)
+  div.classList.add("li-wrapper");
+  div.appendChild(elmnt);
   return div ;
 }
 
+
+function clearList(){
+  // let list = document.querySelector('.li-wrapper')
+  return ul.remove();
+}
+
+
+// function strikeThrough(){
+//   return li.strike()
+// }
 /*        Fin           */
 button.addEventListener("click", e => {
   e.preventDefault();
@@ -38,7 +47,7 @@ button.addEventListener("click", e => {
 });
 clearButton.addEventListener("click", clearList);
 ul.addEventListener("click", strikeThrough);
-button.addEventListener("click", addListAfterClick);
-input.addEventListener("keypress", addListAfterKeypress);
-createDeleteButtonIcon();
-deleteParentNodeOnClick();
+// button.addEventListener("click", addListAfterClick);
+// input.addEventListener("keypress", addListAfterKeypress);
+// createDeleteButtonIcon();
+// deleteParentNodeOnClick();
